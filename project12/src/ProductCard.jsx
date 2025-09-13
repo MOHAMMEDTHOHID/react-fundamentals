@@ -1,11 +1,11 @@
-function Productcard({productName,price,isAvailable}){
+function Productcard(P){
     
     return(
-        <div>
-      <p>name:{productName} </p>
-      <p>cost:{price}</p>
-        <p>status:{isAvailable}</p>
-     </div>
+      <div className="container">
+     <p className="title"> name:{P.productName}</p>
+      <p className="price"> price:{P.price}</p> 
+      <p>{P.isAvailable===true ? <p className="in">Available</p> : <p className="out">Not Available</p>}</p> 
+     </div>      
     )   
-}
+  }
 export default Productcard; 
